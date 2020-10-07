@@ -6,12 +6,12 @@
 using namespace std;
 
 //Initializations
-int bigSoundTop = A0;
-int bigSoundLeft = A1;
-int bigSoundRight = A2;
-int servoPinLeft = 4;
-int servoPinRight = 5;
-int servoPinGo = 6;
+#define bigSoundTop A0
+#define bigSoundLeft A1
+#define bigSoundRight A2
+#define servoPinLeft 4
+#define servoPinRight 5
+#define servoPinGo 6
 Servo servoLeft;
 Servo servoRight;
 Servo servoGo;
