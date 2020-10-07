@@ -1,6 +1,8 @@
 #include <math.h>
 #include <Servo.h>
 
+#define PI 3.1415926535
+
 using namespace std;
 
 //Initializations
@@ -67,12 +69,12 @@ void loop()
     avrRightVal = vecRight / 100;
 
     //Calculates vector i and j directions for all 3 sensors
-    vectorTi = avrTopVal * cos(90);
-    vectorTj = avrTopVal * sin(90);
-    vectorLi = avrLeftVal * cos(210);
-    vectorLj = avrLeftVal * sin(210);
-    vectorRi = avrRightVal * cos(330);
-    vectorRj = avrRightVal * sin(330);
+    vectorTi = avrTopVal * cos(90 * PI / 180);
+    vectorTj = avrTopVal * sin(90 * PI / 180);
+    vectorLi = avrLeftVal * cos(210 * PI / 180);
+    vectorLj = avrLeftVal * sin(210 * PI / 180);
+    vectorRi = avrRightVal * cos(330 * PI / 180);
+    vectorRj = avrRightVal * sin(330 * PI / 180);
 
     //Calculates final vector i and j 
     finalVeci = vectorTi + vectorLi + vectorRi;
